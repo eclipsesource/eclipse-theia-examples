@@ -25,6 +25,8 @@ Install yarn.
     cd browser-app
     yarn start
 
+Alternatively go to Tasks -> Run Task... and select `Theia Examples: Browser Development` in VS code.
+
 Open http://localhost:3000 in the browser.
 
 ## Running the Electron example
