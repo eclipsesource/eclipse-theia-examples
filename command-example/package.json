@@ -1,5 +1,5 @@
 {
-  "name": "editor-example",
+  "name": "command-example",
   "keywords": [
     "theia-extension"
   ],
@@ -9,8 +9,7 @@
     "src"
   ],
   "dependencies": {
-    "@theia/core": "latest",
-    "@theia/editor": "latest"
+    "@theia/core": "latest"
   },
   "devDependencies": {
     "rimraf": "latest",
@@ -24,7 +23,7 @@
   },
   "theiaExtensions": [
     {
-      "frontend": "lib/browser/editor-example-frontend-module"
+      "frontend": "lib/browser/command-example-frontend-module"
     }
   ]
 }

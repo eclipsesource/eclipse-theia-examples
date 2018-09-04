@@ -7,7 +7,7 @@
             "label": "Theia Examples: Browser Development",
             "type": "shell",
             "group": "build",
-            "command": "cd label-contribution-example && yarn watch & cd editor-example && yarn watch & cd browser-app && yarn watch & cd browser-app && yarn start",
+            "command": "cd label-contribution-example && yarn watch & cd editor-example && yarn watch & cd command-example && yarn watch & cd browser-app && yarn watch & cd browser-app && yarn start",
             "presentation": {
                 "reveal": "always",
                 "panel": "new"

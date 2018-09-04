@@ -25,8 +25,6 @@ Install yarn.
     cd browser-app
     yarn start
 
-Alternatively go to Tasks -> Run Task... and select `Theia Examples: Browser Development` in VS code.
-
 Open http://localhost:3000 in the browser.
 
 ## Running the Electron example
@@ -37,16 +35,7 @@ Open http://localhost:3000 in the browser.
 
 ## Developing with the browser example
 
-Start watching of label-contribution-example.
-
-    cd label-contribution-example
-    yarn watch
-
-Start watching of the browser example.
-
-    yarn rebuild:browser
-    cd browser-app
-    yarn watch
+Go to Tasks -> Run Task... and select `Theia Examples: Browser Development` in VS code.
 
 Launch `Start Browser Backend` configuration from VS code.
 
@@ -57,6 +46,16 @@ Open http://localhost:3000 in the browser.
 Start watching of label-contribution-example.
 
     cd label-contribution-example
+    yarn watch
+
+Start watching of editor-example.
+
+    cd editor-example
+    yarn watch
+
+Start watching of command-example.
+
+    cd command-example
     yarn watch
 
 Start watching of the electron example.
