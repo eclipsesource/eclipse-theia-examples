@@ -1,5 +1,5 @@
 {
-  "name": "label-contribution-example",
+  "name": "file-label-example",
   "keywords": [
     "theia-extension"
   ],
@@ -23,7 +23,7 @@
   },
   "theiaExtensions": [
     {
-      "frontend": "lib/browser/label-contribution-frontend-module"
+      "frontend": "lib/browser/file-label-frontend-module"
     }
   ]
 }

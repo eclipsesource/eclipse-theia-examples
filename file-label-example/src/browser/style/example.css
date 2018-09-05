@@ -1,0 +1,16 @@
+.my-icon {
+    background-repeat: no-repeat;
+    background-size: 12px;
+    width: 13px;
+    height: 13px;
+}
+.light-plus .my-icon{
+    background-image: url('./baseline_code_black_18dp.png');
+}
+.dark-plus .my-icon{
+    background-image: url('./baseline_code_white_18dp.png');
+}
+.theia-TreeContainer .my-icon {
+    margin-left: -3px;
+    margin-right: 3px;
+}
