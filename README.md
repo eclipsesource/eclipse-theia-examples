@@ -1,4 +1,6 @@
 # Eclipse Theia Examples
+[![Build Status](https://travis-ci.org/eclipsesource/eclipse-theia-examples.svg?branch=master)](https://travis-ci.org/eclipsesource/eclipse-theia-examples)
+
 This repository contains examples on how to do different things in Eclipse Theia.
 
 ## Getting started
