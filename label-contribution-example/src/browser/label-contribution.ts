@@ -24,7 +24,7 @@ export class MyLabelProviderContribution implements LabelProviderContribution {
     }
 
     getName(uri: URI): string {
-        return uri.displayName;
+        return uri.displayName + " (with my label)";
     }
 
     getLongName(uri: URI): string {
