@@ -1,7 +1,5 @@
-import { Command } from '@theia/core';
+import { Command, CommandHandler } from '@theia/core';
 import { PreferenceService } from '@theia/core/lib/browser';
-import URI from '@theia/core/lib/common/uri';
-import { SingleUriCommandHandler } from '@theia/core/lib/common/uri-command-handler';
 import { inject, injectable } from 'inversify';
 
 export const ToggleCommand: Command = {
@@ -10,7 +8,7 @@ export const ToggleCommand: Command = {
 };
 
 @injectable()
-export class ToggleCommandHandler implements SingleUriCommandHandler {
+export class ToggleCommandHandler implements CommandHandler {
     private readonly EXAMPLE_TOGGLE_PREFERENCE: string = 'example.toggle-command';
 
     constructor(@inject(PreferenceService) private readonly preferenceService: PreferenceService) { }
@@ -22,9 +20,5 @@ export class ToggleCommandHandler implements SingleUriCommandHandler {
 
     execute(): void {
         this.preferenceService.set(this.EXAMPLE_TOGGLE_PREFERENCE, this.isToggled() ? 'off' : 'on');
-    }
-
-    isVisible(uri: URI): boolean {
-        return uri.path.ext === '.my';
     }
 }
