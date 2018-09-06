@@ -20,13 +20,14 @@
     "file-label-example": "0.0.0",
     "editor-example": "0.0.0",
     "command-example": "0.0.0",
-    "task-example": "0.0.0"
+    "task-example": "0.0.0",
+    "terminal-example": "0.0.0"
   },
   "devDependencies": {
     "@theia/cli": "latest"
   },
   "scripts": {
-    "prepare": "theia build --mode development",    
+    "prepare": "theia build --mode development",
     "start": "theia start",
     "watch": "theia build --watch --mode development"
   },
