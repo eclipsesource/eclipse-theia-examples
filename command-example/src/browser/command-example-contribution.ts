@@ -1,5 +1,5 @@
 import { CommonMenus } from '@theia/core/lib/browser';
-import { CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry, SelectionService } from '@theia/core/lib/common';
+import { CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry, SelectionService, MAIN_MENU_BAR } from '@theia/core/lib/common';
 import { UriAwareCommandHandler } from '@theia/core/lib/common/uri-command-handler';
 import { EDITOR_CONTEXT_MENU } from '@theia/editor/lib/browser';
 import { NAVIGATOR_CONTEXT_MENU } from '@theia/navigator/lib/browser/navigator-contribution';
@@ -9,6 +9,7 @@ import { ToggleCommand, ToggleCommandHandler } from './toggle-command';
 
 export const EXAMPLE_NAVIGATOR = [...NAVIGATOR_CONTEXT_MENU, 'example'];
 export const EXAMPLE_EDITOR = [...EDITOR_CONTEXT_MENU, 'example'];
+const MY_MAIN_MENU = [...MAIN_MENU_BAR, '9_mymenu'];
 
 @injectable()
 export class CommandExampleCommandContribution implements CommandContribution {
@@ -30,6 +31,8 @@ export class CommandExampleCommandContribution implements CommandContribution {
 export class CommandExampleMenuContribution implements MenuContribution {
 
     registerMenus(menus: MenuModelRegistry): void {
+        menus.registerSubmenu(MY_MAIN_MENU, 'My Menu');
+
         menus.registerMenuAction(CommonMenus.EDIT_FIND, {
             commandId: ClickCommand.id
         });
@@ -42,7 +45,7 @@ export class CommandExampleMenuContribution implements MenuContribution {
             label: 'Say Hello Editor'
         });
 
-        menus.registerMenuAction(CommonMenus.EDIT_FIND, {
+        menus.registerMenuAction(MY_MAIN_MENU, {
             commandId: ToggleCommand.id
         });
     }
