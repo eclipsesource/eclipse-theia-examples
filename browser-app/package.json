@@ -14,11 +14,13 @@
     "@theia/languages": "latest",
     "@theia/markers": "latest",
     "@theia/monaco": "latest",
+    "@theia/task": "latest",
     "@theia/typescript": "latest",
     "@theia/messages": "latest",
     "file-label-example": "0.0.0",
     "editor-example": "0.0.0",
-    "command-example": "0.0.0"
+    "command-example": "0.0.0",
+    "task-example": "0.0.0"
   },
   "devDependencies": {
     "@theia/cli": "latest"

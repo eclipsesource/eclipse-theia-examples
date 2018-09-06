@@ -1,0 +1,30 @@
+{
+  "name": "task-example",
+  "keywords": [
+    "theia-extension"
+  ],
+  "version": "0.0.0",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "@theia/core": "latest",
+    "@theia/task": "latest"
+  },
+  "devDependencies": {
+    "rimraf": "latest",
+    "typescript": "2.9.2"
+  },
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/task-example-frontend-module"
+    }
+  ]
+}

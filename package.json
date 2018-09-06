@@ -9,6 +9,6 @@
     "lerna": "2.4.0"
   },
   "workspaces": [
-    "file-label-example", "editor-example", "command-example", "browser-app", "electron-app"
+    "file-label-example", "editor-example", "command-example", "task-example", "browser-app", "electron-app"
   ]
 }
