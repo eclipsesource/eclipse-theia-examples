@@ -9,6 +9,7 @@
     "lerna": "2.4.0"
   },
   "workspaces": [
+    "inversify-example",
     "file-label-example",
     "editor-example",
     "command-example",
