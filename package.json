@@ -15,6 +15,7 @@
     "command-example",
     "task-example",
     "terminal-example",
+    "backend-example",
     "browser-app",
     "electron-app"
   ]
