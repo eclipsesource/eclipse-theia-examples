@@ -1,5 +1,12 @@
 import { inject, injectable, multiInject } from "inversify";
 
+@injectable()
+export class AutoInject{
+    do() {
+        console.log('Auto inject Class')
+    };
+}
+
 //this is always needed
 @injectable()
 export class ClassToBind {
@@ -62,6 +69,7 @@ export class InjectionExample {
     @inject(InterfaceB) private interfaceB: InterfaceB;
 
     constructor(
+        @inject(AutoInject) private autoInject: AutoInject,
         @inject(ClassToBind) private classToBind: ClassToBind,
         @inject(InterfaceViaSymbol) private interfaceViaSymbol: InterfaceViaSymbol,
         @inject('InterfaceViaString') private interfaceViaString: InterfaceViaString,
@@ -69,6 +77,7 @@ export class InjectionExample {
     ) { }
 
     print() {
+        this.autoInject.do();
         this.classToBind.do();
         this.interfaceViaSymbol.do();
         this.interfaceViaString.do();

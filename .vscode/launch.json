@@ -7,6 +7,12 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "Debug Inversify",
+            "program": "${workspaceFolder}/inversify-example/lib/browser/main.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "Start Browser Backend",
             "program": "${workspaceRoot}/browser-app/src-gen/backend/main.js",
             "args": [
