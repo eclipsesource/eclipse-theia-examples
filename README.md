@@ -68,5 +68,5 @@ Start watching of the electron example.
 
 Launch `Start Electron Backend` configuration from VS code.
 
-##License
+ ## License
 This project is licensed under the MIT License. See the [LICENSE file](https://github.com/eclipsesource/eclipse-theia-examples/blob/master/LICENSE) for more information.
