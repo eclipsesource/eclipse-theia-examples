@@ -1,7 +1,7 @@
 # Eclipse Theia Examples
 [![Build Status](https://travis-ci.org/eclipsesource/eclipse-theia-examples.svg?branch=master)](https://travis-ci.org/eclipsesource/eclipse-theia-examples)
 
-This repository contains examples on how to do different things in Eclipse Theia.
+This repository contains code examples for common extension scenarios, e.g. adding a menu contribution, in Eclipse Theia. 
 
 ## Getting started
 
@@ -67,3 +67,6 @@ Start watching of the electron example.
     yarn watch
 
 Launch `Start Electron Backend` configuration from VS code.
+
+##License
+This project is licensed under the MIT License. See the LICENSE file for more information.
