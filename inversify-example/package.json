@@ -17,6 +17,6 @@
     "clean": "rimraf lib",
     "build": "tsc",
     "watch": "tsc -w",
-    "test": "node lib/browser/main.js"
+    "test": "tsc && node lib/browser/main.js"
   }
 }

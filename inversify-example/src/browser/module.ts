@@ -1,24 +1,18 @@
 
 import { ContainerModule } from 'inversify';
-import { ClassToBind, InjectionExample, InterfaceViaSymbol, ClassForInterfaceViaSymbol, InterfaceViaString, ClassForInterfaceViaString, ClassAB, InterfaceA, InterfaceB, InterfaceDynamic } from './classes';
+import { MyClass, InterfaceA, InterfaceB, ClassA, ClassBC, InterfaceC } from './contributions';
 
 export default new ContainerModule(bind => {
 
-    //bind class
-    bind(ClassToBind).toSelf();
-    // bind interface
-    bind(InterfaceViaSymbol).to(ClassForInterfaceViaSymbol);
-    bind(InterfaceViaString).to(ClassForInterfaceViaString);
+    // bind one interface
+    bind(InterfaceA).to(ClassA);
 
-    // bind multiple interfaces to same class
-    bind(ClassAB).toSelf();
-    [InterfaceA, InterfaceB].forEach(i => bind(i).toService(ClassAB));
+    // bind several interfaces to the same class
+    [InterfaceB, InterfaceC].forEach(i => bind(i).toService(ClassBC));
+
+    //bind class
+    bind(MyClass).toSelf();
 
     //dynamic binding (in theia used for proxy bindings)
-    bind(InterfaceDynamic).toDynamicValue(() => ({ do(): void { console.log('Dynamic One') } }));
-    bind(InterfaceDynamic).toDynamicValue(() => ({ do(): void { console.log('Dynamic Two') } }));
-
-
-    //runnner
-    bind(InjectionExample).toSelf();
+    bind(InterfaceC).toDynamicValue(() => ({ foo(): void { console.log('Dynamic foo') } }));
 });
