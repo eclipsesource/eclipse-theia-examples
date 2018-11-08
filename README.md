@@ -39,8 +39,6 @@ Open http://localhost:3000 in the browser.
 
 Go to Tasks -> Run Task... and select `Theia Examples: Browser Development` in VS code.
 
-Launch `Start Browser Backend` configuration from VS code.
-
 Open http://localhost:3000 in the browser.
 
 ## Developing with the Electron example
