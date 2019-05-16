@@ -5,14 +5,7 @@ This repository contains code examples for common extension scenarios, e.g. addi
 
 ## Getting started
 
-Install [nvm](https://github.com/creationix/nvm#install-script).
-
-    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
-
-Install npm and node.
-
-    nvm install 8
-    nvm use 8
+Install [node](https://nodejs.org/en/).
 
 Install yarn.
 
