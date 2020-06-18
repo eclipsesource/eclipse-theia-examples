@@ -3,13 +3,25 @@
 
 This repository contains code examples for common extension scenarios, e.g. adding a menu contribution, in Eclipse Theia. 
 
-## Getting started
+## Prerequisites
 
-Install [node](https://nodejs.org/en/).
+Install [nvm](https://github.com/creationix/nvm#install-script).
+
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
+
+Install npm and node.
+
+    nvm install 10
+    nvm use 10
 
 Install yarn.
 
     npm install -g yarn
+
+Install linux packages (if necessary).
+
+    sudo apt-get install g++-4.8 libsecret-1-dev xvfb libx11-dev libxkbfile-dev
+
 ## Install dependencies
 
     yarn
