@@ -1,18 +1,18 @@
 import { JsonRpcServer } from '@theia/core/lib/common/messaging';
 
-export const BackendWithoutClient = Symbol('BackendWithoutClient');
-export const WITHOUT_CLIENT_PATH = '/services/withoutClient';
+export const HelloBackendService = Symbol('HelloBackendService');
+export const HELLO_BACKEND_PATH = '/services/helloBackend';
 
-export interface BackendWithoutClient extends JsonRpcServer<undefined> {
-    greet(toGreet: string): Promise<string>
+export interface HelloBackendService {
+    sayHelloTo(name: string): Promise<string>
 }
-export const BackendWithClient = Symbol('BackendWithClient');
-export const WITH_CLIENT_PATH = '/services/withClient';
+export const HelloBackendWithClientService = Symbol('BackendWithClient');
+export const HELLO_BACKEND_WITH_CLIENT_PATH = '/services/withClient';
 
-export interface BackendWithClient extends JsonRpcServer<BackendClient> {
+export interface HelloBackendWithClientService extends JsonRpcServer<BackendClient> {
     greet(): Promise<string>
 }
 export const BackendClient = Symbol('BackendClient');
 export interface BackendClient {
-    toGreet(): Promise<string>;
+    getName(): Promise<string>;
 }

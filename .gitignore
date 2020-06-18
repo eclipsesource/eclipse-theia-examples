@@ -4,3 +4,8 @@ lib
 *.log
 *-app/*
 !*-app/package.json
+gen-webpack.config.js
+webpack.config.js
+backend-example/src-gen/*
+src-gen/backend/*
+src-gen/frontend/*

@@ -3,7 +3,8 @@
   "scripts": {
     "prepare": "lerna run prepare",
     "rebuild:browser": "theia rebuild:browser",
-    "rebuild:electron": "theia rebuild:electron"
+    "rebuild:electron": "theia rebuild:electron",
+    "watch": "tsc -b configs/root-compilation.tsconfig.json -w"
   },
   "devDependencies": {
     "lerna": "2.4.0"
@@ -18,5 +19,8 @@
     "backend-example",
     "browser-app",
     "electron-app"
-  ]
+  ],
+  "dependencies": {
+    "typescript": "^3.7.5"
+  }
 }

@@ -1,6 +1,7 @@
 {
+    "extends": "../configs/base.tsconfig",
     "compilerOptions": {
-        "strict": true,
+        "strict": false,
         "experimentalDecorators": true,
         "noUnusedLocals": true,
         "emitDecoratorMetadata": true,

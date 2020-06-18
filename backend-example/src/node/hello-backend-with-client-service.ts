@@ -1,12 +1,12 @@
 import { injectable } from "inversify";
-import { BackendClient, BackendWithClient } from "../common/protocol";
+import { BackendClient, HelloBackendWithClientService } from "../common/protocol";
 
 @injectable()
-export class BackendWithClientServer implements BackendWithClient {
+export class HelloBackendWithClientServiceImpl implements HelloBackendWithClientService {
     private client?: BackendClient;
     greet(): Promise<string> {
         return new Promise<string>((resolve, reject) =>
-            this.client ? this.client.toGreet().then(greet => resolve('Hello ' + greet))
+            this.client ? this.client.getName().then(greet => resolve('Hello ' + greet))
                 : reject('No Client'));
     }
     dispose(): void {
