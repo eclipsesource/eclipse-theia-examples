@@ -1,8 +1,6 @@
 {
-    "extends": "../configs/base.tsconfig",
     "compilerOptions": {
-        "strict": false,
-        "experimentalDecorators": true,
+        "skipLibCheck": true,
         "declaration": true,
         "declarationMap": true,
         "noImplicitAny": true,
@@ -10,6 +8,7 @@
         "noImplicitThis": true,
         "noUnusedLocals": true,
         "strictNullChecks": true,
+        "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "downlevelIteration": true,
         "resolveJsonModule": true,
@@ -21,12 +20,6 @@
             "es6",
             "dom"
         ],
-        "sourceMap": true,
-        "rootDir": "src",
-        "outDir": "lib",
-        "skipLibCheck": true
-    },
-    "include": [
-        "src"
-    ]
+        "sourceMap": true
+    }
 }

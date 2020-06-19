@@ -1,0 +1,14 @@
+{
+  "extends": "./base.tsconfig",
+  "include": [],
+  "compilerOptions": {
+    "composite": true,
+    "rootDir": "src",
+    "outDir": "lib"
+  },
+  "references": [
+    {
+      "path": "../backend-example/tsconfig.json"
+    }
+  ]
+}

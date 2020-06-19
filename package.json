@@ -3,10 +3,12 @@
   "scripts": {
     "prepare": "lerna run prepare",
     "rebuild:browser": "theia rebuild:browser",
-    "rebuild:electron": "theia rebuild:electron"
+    "rebuild:electron": "theia rebuild:electron",
+    "watch": "tsc -b configs/root-compilation.tsconfig.json -w"
   },
   "devDependencies": {
-    "lerna": "2.4.0"
+    "lerna": "2.4.0",
+    "typescript": "^3.7.5"
   },
   "workspaces": [
     "inversify-example",
