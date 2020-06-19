@@ -16,13 +16,13 @@ const SayHelloViaBackendCommand: Command = {
 export class BackendExampleCommandContribution implements CommandContribution {
 
     constructor(
-        @inject(HelloBackendWithClientService) private readonly backendWithClient: HelloBackendWithClientService,
+        @inject(HelloBackendWithClientService) private readonly helloBackendWithClientService: HelloBackendWithClientService,
         @inject(HelloBackendService) private readonly helloBackendService: HelloBackendService,
     ) { }
 
     registerCommands(registry: CommandRegistry): void {
         registry.registerCommand(SayHelloViaBackendCommandWithCallBack, {
-            execute: () => this.backendWithClient.greet().then(r => console.log(r))
+            execute: () => this.helloBackendWithClientService.greet().then(r => console.log(r))
         });
         registry.registerCommand(SayHelloViaBackendCommand, {
             execute: () => this.helloBackendService.sayHelloTo('World').then(r => console.log(r))

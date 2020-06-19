@@ -19,8 +19,8 @@ export default new ContainerModule(bind => {
 
     bind(HelloBackendWithClientService).toDynamicValue(ctx => {
         const connection = ctx.container.get(WebSocketConnectionProvider);
-        const client: object = ctx.container.get(BackendClient)
-        return connection.createProxy<HelloBackendWithClientService>(HELLO_BACKEND_WITH_CLIENT_PATH, client);
+        const backendClient: BackendClient = ctx.container.get(BackendClient);
+        return connection.createProxy<HelloBackendWithClientService>(HELLO_BACKEND_WITH_CLIENT_PATH, backendClient);
     }).inSingletonScope();
 });
 
